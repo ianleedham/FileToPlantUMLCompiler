@@ -2,7 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace FileToPlantUMLConsoleApp;
 
-public class ClassProperties
+public class ClassProperties : IClassProperties
 {
     private string _fileContents;
     
@@ -37,4 +37,12 @@ public class ClassProperties
                 .Split(',').Select(x => x.Trim().Split(' ').First());
         }
     }
+}
+
+public interface IClassProperties
+{
+    string ConstructorParameters { get; }
+    string ClassName { get; }
+    IEnumerable<string> Dependencies { get; }
+    
 }

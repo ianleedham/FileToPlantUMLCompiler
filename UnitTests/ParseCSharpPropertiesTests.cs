@@ -3,7 +3,7 @@ using FileToPlantUMLConsoleApp;
 namespace UnitTests;
 
 [TestClass]
-public class UnitTests
+public class ParseCSharpPropertiesTests
 {
     [TestMethod]
     public void CanParseClassName()
